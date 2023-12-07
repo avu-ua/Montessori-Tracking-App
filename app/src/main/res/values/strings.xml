@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Montessori Tracker</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="fr_first_students">Home page</string>
+    <string name="fr_second_add_kid">Add a kiddo!</string>
+    <string name="add_student_btn_text">+</string>
+    <string name="previous">Previous</string>
+
+    <string name="students_page_title"><u>Students</u></string>
+
+</resources>
