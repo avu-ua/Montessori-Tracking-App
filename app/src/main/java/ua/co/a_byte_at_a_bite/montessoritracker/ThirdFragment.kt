@@ -6,14 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import ua.co.a_byte_at_a_bite.montessoritracker.databinding.FrFirstStudentsBinding
+import ua.co.a_byte_at_a_bite.montessoritracker.databinding.FrThirdActivitiesListBinding
 
 /**
- * A simple [Fragment] subclass as the default destination in the navigation.
+ * A simple [Fragment] subclass as the second destination in the navigation.
  */
-class FirstFragment : Fragment() {
+class ThirdFragment : Fragment() {
 
-    private var _binding: FrFirstStudentsBinding? = null
+    private var _binding: FrThirdActivitiesListBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -24,7 +24,7 @@ class FirstFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FrFirstStudentsBinding.inflate(inflater, container, false)
+        _binding = FrThirdActivitiesListBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -32,11 +32,8 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.addStudentButton.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-        }
-        binding.student1Name.setOnClickListener {
-            findNavController().navigate((R.id.action_FirstFragment_to_thirdFragment22))
+        binding.returnFmActivitiesBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_thirdFragment2_to_FirstFragment2)
         }
     }
 
