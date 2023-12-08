@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 
 data class Presentation(val name: String)
 
@@ -40,6 +41,16 @@ class ExpandableListAdapter(
         val groupView = LayoutInflater.from(context).inflate(R.layout.list_group, parent, false)
         val groupNameTextView: TextView = groupView.findViewById(R.id.groupNameTextView)
         groupNameTextView.text = topics[groupPosition].name
+
+        // Set background color based on group position
+        when (groupPosition) {
+            0 -> groupView.setBackgroundColor(ContextCompat.getColor(context, R.color.dark_blue))
+            1 -> groupView.setBackgroundColor(ContextCompat.getColor(context, R.color.dark_green))
+            2 -> groupView.setBackgroundColor(ContextCompat.getColor(context, R.color.black))
+            // Add more cases as needed
+            else -> groupView.setBackgroundColor(ContextCompat.getColor(context, R.color.default_group_color))
+        }
+
         return groupView
     }
 
@@ -53,6 +64,23 @@ class ExpandableListAdapter(
         val childView = LayoutInflater.from(context).inflate(R.layout.list_item, parent, false)
         val lessonNameTextView: TextView = childView.findViewById(R.id.lessonNameTextView)
         lessonNameTextView.text = topics[groupPosition].presentations[childPosition].name
+
+        // Set background color based on group and child positions
+        when {
+            // Example: Set light blue background for "done" items
+            groupPosition == 0 && childPosition in 0..1 -> {
+                childView.setBackgroundColor(ContextCompat.getColor(context, R.color.light_blue))
+            }
+            // Example: Set light gray background for other items
+            groupPosition == 0 -> {
+                childView.setBackgroundColor(ContextCompat.getColor(context, R.color.light_gray))
+            }
+            // Add more cases as needed
+            else -> {
+                childView.setBackgroundColor(ContextCompat.getColor(context, R.color.default_child_color))
+            }
+        }
+
         return childView
     }
 

@@ -9,7 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:background="@android:color/holo_green_dark"
         android:paddingStart="8dp"
         android:text="Group Name"
         android:textColor="@color/white"
