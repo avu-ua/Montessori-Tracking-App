@@ -8,9 +8,6 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import ua.co.a_byte_at_a_bite.montessoritracker.databinding.FrThirdActivitiesListBinding
 
-/**
- * A simple [Fragment] subclass as the second destination in the navigation.
- */
 class ThirdFragment : Fragment() {
 
     private var _binding: FrThirdActivitiesListBinding? = null
@@ -34,6 +31,64 @@ class ThirdFragment : Fragment() {
 
         binding.returnFmActivitiesBtn.setOnClickListener {
             findNavController().navigate(R.id.action_thirdFragment2_to_FirstFragment2)
+        }
+        setupExpandableListView()
+    }
+
+    private fun setupExpandableListView() {
+        val mathPresentations = listOf(
+            Presentation("Math 1"),
+            Presentation("Math 2"),
+            Presentation("Math n")
+        )
+        val languagePresentations = listOf(
+            Presentation("Language 1"),
+            Presentation("Language 2"),
+            Presentation("Language 3")
+        )
+        val lifePresentations = listOf(
+            Presentation("Washing table"),
+            Presentation("Rolling a Floor Mat"),
+            Presentation("Squeezing a Sponge"),
+            Presentation("Nuts and Bolts"),
+            Presentation("Padlocks"),
+            Presentation("Pegs"),
+            Presentation("Boxes and Bottles"),
+            Presentation("Folding Fabrics"),
+            Presentation("Folding Paper"),
+            Presentation("Cutting Paper")
+        )
+
+        val sensorialPresentations = listOf(
+            Presentation("Cylinder Blocks 1"),
+            Presentation("Cylinder Blocks 2"),
+            Presentation("Cylinder Blocks 3"),
+            Presentation("Cylinder Blocks 4"),
+            Presentation("Pink Tower"),
+            Presentation("Brown Stairs"),
+            Presentation("Red Rods"),
+            Presentation("Color Tablets 1"),
+            Presentation("Color Tablets 2"),
+            Presentation("Color Tablets 3")
+        )
+
+        val topics = listOf(
+            Topic("Math", mathPresentations),
+            Topic("Language", languagePresentations),
+            Topic("Practical Life", lifePresentations),
+            Topic("Sensorial", sensorialPresentations)
+        )
+
+        val adapter = ExpandableListAdapter(requireContext(), topics)
+        binding.expandableListView.setAdapter(adapter)
+
+        binding.expandableListView.setOnGroupClickListener { _, _, groupPosition, _ ->
+            if (binding.expandableListView.isGroupExpanded(groupPosition)) {
+                binding.expandableListView.collapseGroup(groupPosition)
+            } else {
+                binding.expandableListView.expandGroup(groupPosition)
+            }
+            true // Return true to consume the click event
         }
     }
 

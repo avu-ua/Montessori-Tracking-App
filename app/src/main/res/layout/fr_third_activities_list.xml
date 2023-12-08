@@ -21,20 +21,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ScrollView
-            android:id="@+id/fr3_scroll_view"
-            android:layout_width="wrap_content"
+        <ExpandableListView
+            android:id="@+id/expandableListView"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="5dp"
+            android:indicatorLeft="10dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView">
-
-            <ExpandableListView
-                android:id="@+id/activities_list"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </ScrollView>
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <Button
             android:id="@+id/return_fm_activities_btn"
