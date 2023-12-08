@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 
@@ -63,6 +64,7 @@ class ExpandableListAdapter(
     ): View {
         val childView = LayoutInflater.from(context).inflate(R.layout.list_item, parent, false)
         val lessonNameTextView: TextView = childView.findViewById(R.id.lessonNameTextView)
+        val statusImageView: ImageView = childView.findViewById(R.id.statusImageView)
         lessonNameTextView.text = topics[groupPosition].presentations[childPosition].name
 
         // Set background color based on group and child positions
@@ -70,14 +72,17 @@ class ExpandableListAdapter(
             // Example: Set light blue background for "done" items
             groupPosition == 0 && childPosition in 0..1 -> {
                 childView.setBackgroundColor(ContextCompat.getColor(context, R.color.light_blue))
+                statusImageView.setImageResource(R.drawable.checked_box)
             }
             // Example: Set light gray background for other items
             groupPosition == 0 -> {
                 childView.setBackgroundColor(ContextCompat.getColor(context, R.color.light_gray))
+                statusImageView.setImageResource(R.drawable.unchecked_box)
             }
             // Add more cases as needed
             else -> {
                 childView.setBackgroundColor(ContextCompat.getColor(context, R.color.default_child_color))
+                statusImageView.setImageResource(R.drawable.unchecked_box)
             }
         }
 
