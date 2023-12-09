@@ -2,23 +2,17 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_page_constraint_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FirstFragment">
 
 
     <TextView
-        android:id="@+id/students_page_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:id="@+id/all_students_page_title"
+        style="@style/PageTitle"
         android:text="@string/students_page_title"
-        android:textAlignment="center"
-        android:textColor="#6750A3"
-        android:textSize="36sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,7 +26,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/students_page_title" />
+        app:layout_constraintTop_toBottomOf="@+id/all_students_page_title" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -52,7 +46,7 @@
                 style="@style/StudentsListItem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/roundstyle"
+                android:background="@drawable/btn_roundstyle"
                 android:text="Jonny Doe"
                 android:textAlignment="center"
                 android:textSize="24sp"
@@ -65,7 +59,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
-                android:background="@drawable/roundstyle"
+                android:background="@drawable/btn_roundstyle"
                 android:text="Hanna Doe"
                 android:textAlignment="center"
                 android:textSize="24sp"
@@ -78,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
-                android:background="@drawable/roundstyle"
+                android:background="@drawable/btn_roundstyle"
                 android:text="Mike Doe"
                 android:textAlignment="center"
                 android:textSize="24sp"
