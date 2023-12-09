@@ -14,7 +14,36 @@
     <string name="single_student_page_title"><u>Student details</u></string>
     <string name="name_row_title">Name :</string>
     <string name="row_btn_text">OK</string>
+    <string name="name_placeholder">Full name</string>
+    <string name="alias_row_title">Nick :</string>
+    <string name="alias_placeholder">Preferred name</string>
+    <string name="dob_row_title">DOB :</string>
+    <string name="dob_placeholder">Birth date</string>
+    <string name="age_row_title">Age :</string>
+    <string name="notes_row_title">Notes :</string>
+    <string name="notes_placeholder">Comments</string>
+
+
+    <string name="notes_tempo">There is little doubt that the international community\'s attitude towards Ukraine has shifted.
+Full support in Washington DC cannot be guaranteed - and yet the fundamentals of the conflict have not budged.
+A country on Europe\'s eastern flank is still fighting to repel Russian forces after the Kremlin launched an illegal invasion.
+Ukraine surprised the world when its armed forces prevented the country being overrun in February 2022.
+Many Western countries surprised them in return with the enthusiasm of their support.
+However, Ukraine cannot keep going in the same vein without the wealth and backing of other countries.
+The first lady\'s warnings seem designed to make that crystal clear. There is little doubt that the international community\'s attitude towards Ukraine has shifted.
+Full support in Washington DC cannot be guaranteed - and yet the fundamentals of the conflict have not budged.
+A country on Europe\'s eastern flank is still fighting to repel Russian forces after the Kremlin launched an illegal invasion.
+Ukraine surprised the world when its armed forces prevented the country being overrun in February 2022.
+Many Western countries surprised them in return with the enthusiasm of their support.
+However, Ukraine cannot keep going in the same vein without the wealth and backing of other countries.
+The first lady\'s warnings seem designed to make that crystal clear.
+    </string>
+
+
     <string name="previous">Back</string>
+    <string name="done_edit_btn">Done</string>
+    <string name="edit_btn">Edit</string>
+    <string name="to_reports_btn">Reports</string>
 
     <!-- Strings used in Third Fragment (List of activities) -->
     <string name="activities_page_title"><u>Presentations</u></string>
