@@ -17,224 +17,195 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TableLayout
-        android:id="@+id/fr_2_data_table"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="@dimen/standard_margin"
-        android:layout_marginEnd="@dimen/standard_margin"
-        app:layout_constraintBottom_toTopOf="@id/fr2_controls_table"
+
+    <!-- NAME row -->
+    <LinearLayout
+        android:id="@+id/fr2_name_row"
+        style="@style/fr2Row"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/single_student_page_title">
+        app:layout_constraintTop_toBottomOf="@id/single_student_page_title">
 
-        <!-- NAME row -->
-        <TableRow
-            android:id="@+id/fr2_name_row"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/_name_row_title"
+            style="@style/fr2RowTitle"
+            android:text="@string/name_row_title" />
+
+        <TextView
+            android:id="@+id/name_row_text"
+            style="@style/fr2RowData"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/name_row_edit"
+            style="@style/fr2RowData"
+            android:hint="@string/name_placeholder"
+            android:inputType="text|textCapWords" />
+
+        <Button
+            android:id="@+id/name_row_btn"
+            style="@style/fr2RowOkBtn" />
+    </LinearLayout>
+
+
+    <!-- NICK row -->
+    <LinearLayout
+        android:id="@+id/fr2_alias_row"
+        style="@style/fr2Row"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fr2_name_row">
+
+        <TextView
+            android:id="@+id/alias_row_title"
+            style="@style/fr2RowTitle"
+            android:text="@string/alias_row_title" />
+
+        <TextView
+            android:id="@+id/alias_row_text"
+            style="@style/fr2RowData"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/alias_row_edit"
+            style="@style/fr2RowData"
+            android:hint="@string/alias_placeholder"
+            android:inputType="text|textCapWords" />
+
+        <Button
+            android:id="@+id/alias_row_btn"
+            style="@style/fr2RowOkBtn" />
+    </LinearLayout>
+
+
+    <!-- DOB row -->
+    <LinearLayout
+        android:id="@+id/fr2_dob_row"
+        style="@style/fr2Row"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fr2_alias_row">
+
+        <TextView
+            android:id="@+id/dob_row_title"
+            style="@style/fr2RowTitle"
+            android:text="@string/dob_row_title" />
+
+        <TextView
+            android:id="@+id/dob_row_text"
+            style="@style/fr2RowData"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/dob_row_edit"
+            style="@style/fr2RowData"
+            android:hint="@string/dob_placeholder"
+            android:inputType="text|textCapWords" />
+
+        <Button
+            android:id="@+id/dob_row_btn"
+            style="@style/fr2RowOkBtn" />
+    </LinearLayout>
+
+    <!-- AGE row -->
+    <LinearLayout
+        android:id="@+id/fr2_age_row"
+        style="@style/fr2Row"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fr2_dob_row">
+
+        <TextView
+            android:id="@+id/fr2_age_title"
+            style="@style/fr2RowTitle"
+            android:text="@string/age_row_title" />
+
+        <TextView
+            android:id="@+id/fr2_age_data"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginBottom="16dp">
-
-            <TextView
-                android:id="@+id/_name_row_title"
-                style="@style/singleStudentRowTitle"
-                android:background="@drawable/text_roundstyle"
-                android:text="@string/name_row_title" />
-
-            <TextView
-                android:id="@+id/name_row_text"
-                style=":style/singleStudentDataField"
-                android:layout_weight="3"
-                android:visibility="gone" />
-
-            <EditText
-                android:id="@+id/name_row_edit"
-                style=":style/singleStudentDataField"
-                android:layout_weight="3"
-                android:hint="@string/name_placeholder"
-                android:inputType="text|textCapWords"
-                android:textSize="16sp" />
-
-            <Button
-                android:id="@+id/name_row_btn"
-                style="@style/singleStudentOkBtn" />
-        </TableRow>
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            tools:text="4 years 8 months"/>
+    </LinearLayout>
 
 
-        <!-- NICK row -->
-        <TableRow
-            android:id="@+id/fr2_alias_row"
+    <!-- NOTES row -->
+    <LinearLayout
+        android:id="@+id/fr2_notes_row"
+        style="@style/fr2Row"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fr2_age_row">
+
+        <TextView
+            android:id="@+id/f2_notes_title"
+            style="@style/fr2RowTitle"
+            android:text="@string/notes_row_title" />
+
+        <EditText
+            android:id="@+id/f2_notes_edit"
+            style="@style/fr2RowData"
+            android:hint="@string/notes_placeholder"
+            android:inputType="text|textMultiLine" />
+
+        <Button
+            android:id="@+id/f2_notes_btn"
+            style="@style/fr2RowOkBtn" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/fr2_notes_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/fr2_controls_table"
+        app:layout_constraintTop_toBottomOf="@+id/fr2_notes_row">
+
+        <TextView
+            android:id="@+id/f2_notes_text"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="16dp">
-
-            <TextView
-                android:id="@+id/alias_row_title"
-                style="@style/singleStudentRowTitle"
-                android:background="@drawable/text_roundstyle"
-                android:text="@string/alias_row_title" />
-
-            <TextView
-                android:id="@+id/alias_row_text"
-                style=":style/singleStudentDataField"
-                android:layout_weight="3"
-                android:visibility="gone" />
-
-            <EditText
-                android:id="@+id/alias_row_edit"
-                style=":style/singleStudentDataField"
-                android:layout_weight="3"
-                android:hint="@string/alias_placeholder"
-                android:inputType="text|textCapWords"
-                android:textSize="16sp" />
-
-            <Button
-                android:id="@+id/alias_row_btn"
-                style="@style/singleStudentOkBtn" />
-        </TableRow>
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:text="@string/notes_tempo" />
+    </ScrollView>
 
 
-        <!-- DOB row -->
-        <TableRow
-            android:id="@+id/fr2_dob_row"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="16dp">
-
-            <TextView
-                android:id="@+id/dob_row_title"
-                style="@style/singleStudentRowTitle"
-                android:background="@drawable/text_roundstyle"
-                android:text="@string/dob_row_title" />
-
-            <TextView
-                android:id="@+id/dob_row_text"
-                style=":style/singleStudentDataField"
-                android:layout_weight="3"
-                android:visibility="gone" />
-
-            <EditText
-                android:id="@+id/dob_row_edit"
-                style=":style/singleStudentDataField"
-                android:layout_weight="3"
-                android:hint="@string/dob_placeholder"
-                android:inputType="text|textCapWords"
-                android:textSize="16sp" />
-
-            <Button
-                android:id="@+id/dob_row_btn"
-                style="@style/singleStudentOkBtn" />
-        </TableRow>
-
-        <!-- AGE row -->
-        <TableRow
-            android:id="@+id/f2_age_row"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="16dp">
-
-            <TextView
-                android:id="@+id/f2_age_title"
-                style="@style/singleStudentRowTitle"
-                android:background="@drawable/text_roundstyle"
-                android:text="@string/age_row_title" />
-
-            <TextView
-                android:id="@+id/f2_age_data"
-                style=":style/singleStudentDataField"
-                android:layout_weight="7" />
-        </TableRow>
-
-        <!-- NOTES row -->
-        <TableRow
-            android:id="@+id/f2_notes_row"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="16dp">
-
-            <TextView
-                android:id="@+id/f2_notes_title"
-                style="@style/singleStudentRowTitle"
-                android:background="@drawable/text_roundstyle"
-                android:text="@string/notes_row_title" />
-
-            <ScrollView
-                android:id="@+id/f2_notes_scroll_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:visibility="gone">
-
-                <TextView
-                    android:id="@+id/f2_notes_text"
-                    style=":style/singleStudentDataField"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:maxWidth="80dp"
-                    android:text="@string/notes_tempo"
-                    android:visibility="visible" />
-            </ScrollView>
-
-            <EditText
-                android:id="@+id/f2_notes_edit"
-                style=":style/singleStudentDataField"
-                android:layout_weight="3"
-                android:hint="@string/notes_placeholder"
-                android:inputType="text|textMultiLine"
-                android:textSize="16sp"
-                android:visibility="visible" />
-
-            <Button
-                android:id="@+id/f2_notes_btn"
-                style="@style/singleStudentOkBtn" />
-        </TableRow>
-
-    </TableLayout>
-
-    <TableLayout
+    <LinearLayout
         android:id="@+id/fr2_controls_table"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent">
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-        <TableRow
-            android:id="@+id/fr2_controls_row"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/to_fr1_btn"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/standard_margin"
-                android:layout_marginLeft="@dimen/standard_margin"
-                android:layout_marginBottom="@dimen/standard_margin"
-                android:layout_weight="1"
-                android:text="@string/previous" />
+        <Button
+            android:id="@+id/to_fr1_btn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/previous" />
 
-            <Button
-                android:id="@+id/done_edit_btn"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/standard_margin"
-                android:layout_marginStart="@dimen/standard_margin"
-                android:layout_marginBottom="@dimen/standard_margin"
-                android:layout_weight="1"
-                android:text="@string/done_edit_btn" />
+        <Button
+            android:id="@+id/done_edit_btn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:text="@string/done_edit_btn" />
 
-            <Button
-                android:id="@+id/to_fr3_btn"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/standard_margin"
-                android:layout_marginLeft="@dimen/standard_margin"
-                android:layout_marginRight="@dimen/standard_margin"
-                android:layout_marginBottom="@dimen/standard_margin"
-                android:layout_weight="1"
-                android:text="@string/to_reports_btn" />
+        <Button
+            android:id="@+id/to_fr3_btn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/to_reports_btn" />
 
-        </TableRow>
 
-    </TableLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
