@@ -3,8 +3,9 @@
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="fr_first_students">Home page</string>
-    <string name="fr_second_add_kid">Add a kiddo!</string>
-    <string name="fr_third_activities_list">to Home page</string>
+    <string name="fr_second_add_kid">UPDATE LATER !</string>
+    <string name="fr_third_activities_list">UPDATE LATER !</string>
+    <string name="fr_fourth_view_edit_activity">UPDATE LATER !</string>
 
     <!-- Strings used in First Fragment (Student - Home Page) -->
     <string name="students_page_title"><u>Students</u></string>
@@ -25,18 +26,18 @@
 
 
     <string name="notes_tempo">TEST TEXT. There is little doubt that the international community\'s attitude towards Ukraine has shifted.
-Full support in Washington DC cannot be guaranteed - and yet the fundamentals of the conflict have not budged.
-A country on Europe\'s eastern flank is still fighting to repel Russian forces after the Kremlin launched an illegal invasion.
-Ukraine surprised the world when its armed forces prevented the country being overrun in February 2022.
-Many Western countries surprised them in return with the enthusiasm of their support.
-However, Ukraine cannot keep going in the same vein without the wealth and backing of other countries.
-The first lady\'s warnings seem designed to make that crystal clear. There is little doubt that the international community\'s attitude towards Ukraine has shifted.
-Full support in Washington DC cannot be guaranteed - and yet the fundamentals of the conflict have not budged.
-A country on Europe\'s eastern flank is still fighting to repel Russian forces after the Kremlin launched an illegal invasion.
-Ukraine surprised the world when its armed forces prevented the country being overrun in February 2022.
-Many Western countries surprised them in return with the enthusiasm of their support.
-However, Ukraine cannot keep going in the same vein without the wealth and backing of other countries.
-The first lady\'s warnings seem designed to make that crystal clear.
+            Full support in Washington DC cannot be guaranteed - and yet the fundamentals of the conflict have not budged.
+            A country on Europe\'s eastern flank is still fighting to repel Russian forces after the Kremlin launched an illegal invasion.
+            Ukraine surprised the world when its armed forces prevented the country being overrun in February 2022.
+            Many Western countries surprised them in return with the enthusiasm of their support.
+            However, Ukraine cannot keep going in the same vein without the wealth and backing of other countries.
+            The first lady\'s warnings seem designed to make that crystal clear. There is little doubt that the international community\'s attitude towards Ukraine has shifted.
+            Full support in Washington DC cannot be guaranteed - and yet the fundamentals of the conflict have not budged.
+            A country on Europe\'s eastern flank is still fighting to repel Russian forces after the Kremlin launched an illegal invasion.
+            Ukraine surprised the world when its armed forces prevented the country being overrun in February 2022.
+            Many Western countries surprised them in return with the enthusiasm of their support.
+            However, Ukraine cannot keep going in the same vein without the wealth and backing of other countries.
+            The first lady\'s warnings seem designed to make that crystal clear.
     </string>
 
 
@@ -48,10 +49,10 @@ The first lady\'s warnings seem designed to make that crystal clear.
     <!-- Strings used in Third Fragment (List of activities) -->
     <string name="activities_page_title"><u>Presentations</u></string>
     <string name="fm_fr3_to_fr1">Back</string>
-
-
     <string name="hello_blank_fragment">Presentations</string>
-
     <string name="unchecked">Unchecked check-box</string>
+
+    <!-- Strings used in Second Fragment (Add a student) -->
+    <string name="an_activity_page_title"><u>Presentations</u></string>
 
 </resources>
