@@ -7,15 +7,38 @@
     android:layout_height="match_parent"
     tools:context=".SecondFragment">
 
-    <TextView
-        android:id="@+id/single_student_page_title"
-        style="@style/PageTitle"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/fr2_title_row"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/single_student_page_title"
+        android:orientation="horizontal"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/single_student_page_title"
+            style="@style/PageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/single_student_page_title" />
+
+        <TextView
+            android:id="@+id/fr2_edit_mode_text_view"
+            style="@style/PageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_mode_text" />
+
+        <TextView
+            android:id="@+id/fr2_view_mode_text_view"
+            style="@style/PageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/view_mode_text"
+            android:visibility="gone"/>
+    </LinearLayout>
 
 
     <!-- NAME row -->
@@ -24,7 +47,7 @@
         style="@style/fr2Row"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/single_student_page_title">
+        app:layout_constraintTop_toBottomOf="@+id/fr2_title_row">
 
         <TextView
             android:id="@+id/_name_row_title"
@@ -42,9 +65,6 @@
             android:hint="@string/name_placeholder"
             android:inputType="text|textCapWords" />
 
-        <Button
-            android:id="@+id/name_row_btn"
-            style="@style/fr2RowOkBtn" />
     </LinearLayout>
 
 
@@ -72,9 +92,6 @@
             android:hint="@string/alias_placeholder"
             android:inputType="text|textCapWords" />
 
-        <Button
-            android:id="@+id/alias_row_btn"
-            style="@style/fr2RowOkBtn" />
     </LinearLayout>
 
 
@@ -102,9 +119,6 @@
             android:hint="@string/dob_placeholder"
             android:inputType="text|textCapWords" />
 
-        <Button
-            android:id="@+id/dob_row_btn"
-            style="@style/fr2RowOkBtn" />
     </LinearLayout>
 
     <!-- AGE row -->
@@ -149,9 +163,6 @@
             android:hint="@string/notes_placeholder"
             android:inputType="text|textMultiLine" />
 
-        <Button
-            android:id="@+id/f2_notes_btn"
-            style="@style/fr2RowOkBtn" />
     </LinearLayout>
 
     <ScrollView
@@ -186,10 +197,11 @@
 
 
         <Button
-            android:id="@+id/to_fr1_btn"
+            android:id="@+id/fr2_edit_btn"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="@string/previous" />
+            android:text="@string/edit_btn_text"
+            android:visibility="invisible" />
 
         <Button
             android:id="@+id/done_edit_btn"
@@ -203,7 +215,8 @@
             android:id="@+id/to_fr3_btn"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="@string/to_reports_btn" />
+            android:text="@string/to_reports_btn"
+            android:visibility="invisible" />
 
 
     </LinearLayout>

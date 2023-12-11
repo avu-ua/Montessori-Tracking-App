@@ -63,8 +63,8 @@ class ExpandableListAdapter(
         parent: ViewGroup?
     ): View {
         val childView = LayoutInflater.from(context).inflate(R.layout.list_item, parent, false)
-        val lessonNameTextView: TextView = childView.findViewById(R.id.lessonNameTextView)
-        val statusImageView: ImageView = childView.findViewById(R.id.statusImageView)
+        val lessonNameTextView: TextView = childView.findViewById(R.id.fr3_lesson_name_view)
+        val statusImageView: ImageView = childView.findViewById(R.id.fr3_status_img_view)
         lessonNameTextView.text = topics[groupPosition].presentations[childPosition].name
 
         // Set background color based on group and child positions

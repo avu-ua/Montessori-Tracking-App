@@ -25,17 +25,14 @@
         tools:layout="@layout/fr_second_add_kid">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_SecondFragment_to_thirdFragment"
+            app:destination="@id/thirdFragment" />
     </fragment>
     <fragment
         android:id="@+id/thirdFragment"
         android:name="ua.co.a_byte_at_a_bite.montessoritracker.ThirdFragment"
         android:label="@string/fr_third_activities_list"
         tools:layout="@layout/fr_third_activities_list" >
-        <action
-            android:id="@+id/action_thirdFragment2_to_FirstFragment2"
-            app:destination="@id/FirstFragment" />
         <action
             android:id="@+id/action_thirdFragment_to_fourthFragment"
             app:destination="@id/fourthFragment" />

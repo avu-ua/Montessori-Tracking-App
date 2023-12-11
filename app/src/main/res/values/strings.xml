@@ -3,7 +3,7 @@
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="fr_first_students">Home page</string>
-    <string name="fr_second_add_kid">UPDATE LATER !</string>
+    <string name="fr_second_add_kid">to Students List</string>
     <string name="fr_third_activities_list">UPDATE LATER !</string>
     <string name="fr_fourth_view_edit_activity">UPDATE LATER !</string>
 
@@ -12,7 +12,9 @@
     <string name="add_student_btn_text">+</string>
 
     <!-- Strings used in Second Fragment (Add a student) -->
-    <string name="single_student_page_title"><u>Student details</u></string>
+    <string name="single_student_page_title"><u>Student details - </u></string>
+    <string name="edit_mode_text"><u>edit</u></string>
+    <string name="view_mode_text"><u>view</u></string>
     <string name="name_row_title">Name :</string>
     <string name="row_btn_text">OK</string>
     <string name="name_placeholder">Full name</string>
@@ -41,9 +43,8 @@
     </string>
 
 
-    <string name="previous">Back</string>
+    <string name="edit_btn_text">Edit</string>
     <string name="done_edit_btn">Done</string>
-    <string name="edit_btn">Edit</string>
     <string name="to_reports_btn">Reports</string>
 
     <!-- Strings used in Third Fragment (List of activities) -->
