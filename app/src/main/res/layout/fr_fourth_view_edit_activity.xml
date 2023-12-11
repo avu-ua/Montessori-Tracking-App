@@ -103,8 +103,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="false"
+            android:text=" "
             android:textAlignment="textStart"
             android:textSize="16sp" />
+        <ImageView
+            android:id="@+id/fr4_checkmark_edit_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/edit_icon"
+            android:visibility="gone"/>
     </LinearLayout>
 
     <LinearLayout
@@ -118,9 +125,9 @@
             android:id="@+id/fr4_date_title"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:text="Date completed:"
             android:textSize="16sp"
-            android:textStyle="bold"
-            android:text="Date:" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/fr4_date"
@@ -129,6 +136,13 @@
             android:textSize="16sp"
             android:textStyle="bold"
             android:text="10.12.2023" />
+
+        <ImageView
+            android:id="@+id/fr4_date_edit_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/edit_icon"
+            android:visibility="gone"/>
     </LinearLayout>
 
     <LinearLayout
@@ -164,6 +178,12 @@
             android:layout_height="wrap_content"
             app:srcCompat="@android:drawable/btn_star_big_off" />
 
+        <ImageView
+            android:id="@+id/fr4_grade_edit_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/edit_icon"
+            android:visibility="gone"/>
 
     </LinearLayout>
 
@@ -181,10 +201,16 @@
             android:id="@+id/fr4_notes_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:textSize="16sp"
             android:textStyle="bold"
             android:text="Notes:" />
+
+        <ImageView
+            android:id="@+id/fr4_note_edit_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/edit_icon"
+            android:visibility="gone"/>
     </LinearLayout>
 
     <ScrollView
@@ -194,6 +220,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:paddingBottom="8dp"
         app:layout_constraintBottom_toTopOf="@id/fr4_controls_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -218,16 +245,31 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            android:id="@+id/fr4_to_fr3_btn"
+            android:id="@+id/fr4_cancel_save_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Back" />
+            android:width="95dp"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:text="Cancel" />
 
         <Button
             android:id="@+id/fr4_edit_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:width="95dp"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginEnd="@dimen/standard_margin"
             android:text="Edit" />
+
+        <Button
+            android:id="@+id/fr4_save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="95dp"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:text="Save" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

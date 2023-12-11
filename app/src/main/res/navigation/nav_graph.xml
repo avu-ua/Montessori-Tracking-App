@@ -41,10 +41,5 @@
         android:id="@+id/fourthFragment"
         android:name="ua.co.a_byte_at_a_bite.montessoritracker.FourthFragment"
         android:label="@string/fr_fourth_view_edit_activity"
-        tools:layout="@layout/fr_fourth_view_edit_activity">
-
-        <action
-            android:id="@+id/action_fourthFragment_to_thirdFragment"
-            app:destination="@id/thirdFragment" />
-    </fragment>
+        tools:layout="@layout/fr_fourth_view_edit_activity"/>
 </navigation>
