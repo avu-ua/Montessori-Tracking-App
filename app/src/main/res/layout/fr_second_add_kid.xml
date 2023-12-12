@@ -25,19 +25,12 @@
             android:text="@string/single_student_page_title" />
 
         <TextView
-            android:id="@+id/fr2_edit_mode_text_view"
+            android:id="@+id/fr2_page_mode_text"
             style="@style/PageTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/edit_mode_text" />
 
-        <TextView
-            android:id="@+id/fr2_view_mode_text_view"
-            style="@style/PageTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/view_mode_text"
-            android:visibility="gone"/>
     </LinearLayout>
 
 
@@ -153,12 +146,12 @@
         app:layout_constraintTop_toBottomOf="@+id/fr2_age_row">
 
         <TextView
-            android:id="@+id/f2_notes_title"
+            android:id="@+id/fr2_notes_title"
             style="@style/fr2RowTitle"
             android:text="@string/notes_row_title" />
 
         <EditText
-            android:id="@+id/f2_notes_edit"
+            android:id="@+id/fr2_notes_edit"
             style="@style/fr2RowData"
             android:hint="@string/notes_placeholder"
             android:inputType="text|textMultiLine" />
@@ -174,7 +167,7 @@
         app:layout_constraintTop_toBottomOf="@+id/fr2_notes_row">
 
         <TextView
-            android:id="@+id/f2_notes_text"
+            android:id="@+id/fr2_notes_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/standard_margin"
@@ -202,6 +195,13 @@
             android:layout_height="wrap_content"
             android:text="@string/edit_btn_text"
             android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/fr2_cancel_edit_btn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel_edit_btn_text"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/done_edit_btn"

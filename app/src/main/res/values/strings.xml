@@ -44,6 +44,7 @@
 
 
     <string name="edit_btn_text">Edit</string>
+    <string name="cancel_edit_btn_text"><u>Cancel</u></string>
     <string name="done_edit_btn">Done</string>
     <string name="to_reports_btn">Reports</string>
 
