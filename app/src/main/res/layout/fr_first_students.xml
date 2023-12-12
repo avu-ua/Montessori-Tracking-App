@@ -28,132 +28,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fr1_page_title" />
 
-    <ScrollView
-        android:id="@+id/fr1_scroll_view"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fr1_add_student_btn">
-
-        <LinearLayout
-            android:id="@+id/fr1_linear_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/fr1_std1_row"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/student_1_name"
-                    style="@style/StudentsListItem"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:background="@drawable/btn_roundstyle"
-                    android:text="Jonny Doe"
-                    android:textAlignment="center"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/fr1_std1_profile_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/btn_roundstyle"
-                    android:src="@drawable/profile_icon" />
-
-                <ImageView
-                    android:id="@+id/fr1_std1_report_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/btn_roundstyle"
-                    android:src="@drawable/report_icon" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/fr1_std2_row"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/student_2_name"
-                    style="@style/StudentsListItem"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_weight="3"
-                    android:background="@drawable/btn_roundstyle"
-                    android:text="Hanna Doe"
-                    android:textAlignment="center"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/fr1_std2_profile_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/btn_roundstyle"
-                    android:src="@drawable/profile_icon" />
-
-                <ImageView
-                    android:id="@+id/fr1_std2_report_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/btn_roundstyle"
-                    android:src="@drawable/report_icon" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/fr1_std3_row"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/student_3_name"
-                    style="@style/StudentsListItem"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_weight="3"
-                    android:background="@drawable/btn_roundstyle"
-                    android:text="Mike Doe"
-                    android:textAlignment="center"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/fr1_std3_profile_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/btn_roundstyle"
-                    android:src="@drawable/profile_icon" />
-
-                <ImageView
-                    android:id="@+id/fr1_std3_report_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/btn_roundstyle"
-                    android:src="@drawable/report_icon" />
-            </LinearLayout>
-
-        </LinearLayout>
-    </ScrollView>
+        app:layout_constraintTop_toBottomOf="@+id/fr1_add_student_btn"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
